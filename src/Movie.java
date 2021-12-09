@@ -1,18 +1,18 @@
 public class Movie {
-    private String title;
-    private String code;
+    private String movieName;
+    private String movieCode;
 
-    public Movie(String title, String code) {
+    public Movie(String movieName, String movieCode) {
 
-        this.title = title;
-        this.code = code;
+        this.movieCode = movieCode;
+        this.movieCode = movieCode;
     }
 
     public String getTitle() {
-        return title;
+        return movieCode;
     }
 
     public String getCode() {
-        return code;
+        return movieCode;
     }
 }
