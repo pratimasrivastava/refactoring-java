@@ -8,11 +8,11 @@ public class Movie {
         this.movieCode = movieCode;
     }
 
-    public String getTitle() {
+    public String getMovieName() {
         return movieCode;
     }
 
-    public String getCode() {
+    public String getMovieCode() {
         return movieCode;
     }
 }
