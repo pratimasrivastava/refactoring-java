@@ -1,0 +1,10 @@
+package enums;
+
+/**
+ * MovieCode Enum which has regular,new,children
+ */
+public enum MovieCode {
+
+    REGULAR, NEW, CHILDRENS;
+
+} 
