@@ -1,0 +1,12 @@
+package entity;
+
+import java.util.HashMap;
+import java.util.List;
+
+public class MovieRentedResult {
+
+    private double totalAmount;
+    private int frequentEnterPoints;
+    private HashMap<String, Movie> movieMap;
+
+}
