@@ -1,18 +1,26 @@
 public class Movie {
-    private String title;
-    private String code;
+    private String movieName;
+    private String movieCode;
+    private double amount;
 
-    public Movie(String title, String code) {
+    public Movie(String movieName, String movieCode,double amount) {
 
-        this.title = title;
-        this.code = code;
+        this.movieName = movieName;
+        this.movieCode = movieCode;
+        this.amount = amount;
     }
 
-    public String getTitle() {
-        return title;
+    public String getMovieName() {
+        return movieName;
     }
 
-    public String getCode() {
-        return code;
+    public String getMovieCode() {
+        return movieCode;
+    }
+     public String getAmount() {
+        return amount;
+    }
+     public void setAmount(ouble amount) {
+        this.amount = amount;
     }
 }
