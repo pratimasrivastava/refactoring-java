@@ -3,12 +3,15 @@ import java.util.Arrays;
 public class Main {
 
   public static void main(String[] args) {
-    String expected = "Rental Record for C. U. Stomer\n\tYou've Got Mail\t3.5\n\tMatrix\t2.0\nAmount owed is 5.5\nYou earned 2 frequent points\n";
-
-    String result = new RentalInfo().statement(new Customer("C. U. Stomer", Arrays.asList(new MovieRental("F001", 3), new MovieRental("F002", 1))));
-
-    if (!result.equals(expected)) {
-      throw new AssertionError("Expected: " + System.lineSeparator() + String.format(expected) + System.lineSeparator() + System.lineSeparator() + "Got: " + System.lineSeparator() + result);
+    
+    RentalServiceImpl  result = new RentalServiceImpl ().statement(new Customer("C. U. Stomer", Arrays.asList(new MovieRental("F001", 3), new MovieRental("F002", 1))));
+    HashMap<String, Movie> movieMap = result.getMovieMap();
+    if (!movieMap.get(F001).getMovieName().equals("You've Got Mail")) {
+      throw new AssertionError("Expected Movie Name: You've Got Mail"+movieMap.get(F001).getMovieName());
+    }
+    
+    if (!movieMap.get(F002).getMovieName().equals("Matrix")) {
+      throw new AssertionError("Expected Movie Name: Matrix"+movieMap.get(F001).getMovieName());
     }
 
     System.out.println("Success");
